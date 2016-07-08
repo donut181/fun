@@ -1,0 +1,31 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+header{
+	background-color: #55a;
+}
+
+button{
+	display:inline;
+}
+
+input,canvas{
+	display:block;
+}
+
+canvas{
+	float:left;
+}
+
+#log, #frame{
+	border:1px solid #000;
+	border-radius: 5px;
+	float:left;
+	width:500px;
+}
+
+#settingsContainer{
+	display:none;
+}

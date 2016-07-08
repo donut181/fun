@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<meta charset="utf8" />
+		<title>Little Fun</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<header>
+			<button id="button_settings" onclick="showSettings()">Settings</button>		
+		</header>
+
+		<canvas id="playRoom" width="500" height="500" style="border:1px solid #000;"></canvas>
+		<div id="frame">
+			<div id="settingsContainer">
+				<table>
+					<caption>1 Gracz</caption>
+					<tr><td>Góra	</td><td><input type="text" class="settingsInputs" id="setUp1">		</input></td></tr>
+					<tr><td>Lewo	</td><td><input type="text" class="settingsInputs" id="setLeft1">	</input></td></tr>
+					<tr><td>Dół		</td><td><input type="text" class="settingsInputs" id="setDown1">	</input></td></tr>
+					<tr><td>Prawo	</td><td><input type="text" class="settingsInputs" id="setRight1">	</input></td></tr>
+				</table>
+				<button id="cancelSettings" onclick="cancelSettings()">Anuluj</button>
+				<button id="confirmSettings" onclick="confirmSettings()">Ok</button>
+			</div>
+		</div>
+		<div id="log"></div>
+		
+		<script src="interface.js"></script>
+	</body>
+</html>
