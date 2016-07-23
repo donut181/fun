@@ -14,4 +14,13 @@ function clearCtx(){
 	ctx.clearRect(0,0,WIDTH,HEIGHT);
 }
 
-setInterval(updateGraphics,200);
+var game = {
+	
+}
+play = function(){
+	game.interval = setInterval(updateGraphics,20);
+}
+
+stopGame = function(){
+	clearInterval(game.interval);
+}

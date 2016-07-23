@@ -21,7 +21,8 @@ document.onkeyup = function(event){
 }
 
 function updatePlayerPosition(){
-	log(player1.x+" " + player1.pressingRight);
+	/*log(player1.x+" " + player1.pressingRight);*/
+	document.getElementById("log").innerHTML = JSON.stringify(player1);
 	if(player1.pressingRight)
 		player1.x += player1.spdX;
 	if(player1.pressingLeft)
@@ -30,5 +31,4 @@ function updatePlayerPosition(){
 		player1.y += player1.spdY;
 	if(player1.pressingUp)
 		player1.y -= player1.spdY;
-	}
 }
