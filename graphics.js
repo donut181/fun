@@ -15,12 +15,12 @@ function clearCtx(){
 }
 
 var game = {
-	
-}
-play = function(){
-	game.interval = setInterval(updateGraphics,20);
 }
 
-stopGame = function(){
-	clearInterval(game.interval);
+game.play = function(){
+	this.interval = setInterval(updateGraphics,20);
+}
+
+game.stopGame = function(){
+	clearInterval(this.interval);
 }
