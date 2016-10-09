@@ -1,4 +1,3 @@
-
 var ctx = getId("playRoom").getContext("2d");
 var WIDTH = getId("playRoom").width;
 var HEIGHT = getId("playRoom").height;
@@ -15,12 +14,19 @@ function clearCtx(){
 }
 
 var game = {
+	isWorking : false,
 }
 
 game.play = function(){
-	this.interval = setInterval(updateGraphics,20);
+	if(!this.isWorking){
+			this.interval = setInterval(updateGraphics,20);
+	}
+	this.isWorking = true;
 }
 
 game.stopGame = function(){
-	clearInterval(this.interval);
+	if(this.isWorking){
+		clearInterval(this.interval);
+		this.isWorking = false;
+	}
 }

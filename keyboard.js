@@ -1,4 +1,5 @@
 document.onkeydown = function(event){
+	log(event.keyCode+'<br>');
 	if(event.keyCode === 68)
 		player1.pressingRight = true;
 	else if(event.keyCode === 83)
@@ -10,6 +11,7 @@ document.onkeydown = function(event){
 }
 
 document.onkeyup = function(event){
+	document.getElementById("log").innerHTML="";
 	if(event.keyCode === 68)
 		player1.pressingRight = false;
 	else if(event.keyCode === 83)
@@ -22,7 +24,7 @@ document.onkeyup = function(event){
 
 function updatePlayerPosition(){
 	/*log(player1.x+" " + player1.pressingRight);*/
-	document.getElementById("log").innerHTML = JSON.stringify(player1);
+	//document.getElementById("log").innerHTML = JSON.stringify(player1);
 	if(player1.pressingRight)
 		player1.x += player1.spdX;
 	if(player1.pressingLeft)
