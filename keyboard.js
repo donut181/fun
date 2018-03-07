@@ -1,13 +1,15 @@
 document.onkeydown = function(event){
-	log(event.keyCode+'<br>');
-	if(event.keyCode === 68)
-		player1.pressingRight = true;
-	else if(event.keyCode === 83)
-		player1.pressingDown = true;
-	else if(event.keyCode === 65)
-		player1.pressingLeft = true;
-	else if(event.keyCode === 87)
-		player1.pressingUp = true;
+	if(!event.repeat){
+		log(event.keyCode + ' ' + String.fromCharCode(event.keyCode) +'<br>');
+		if(event.keyCode === 68)
+			player1.pressingRight = true;
+		else if(event.keyCode === 83)
+			player1.pressingDown = true;
+		else if(event.keyCode === 65)
+			player1.pressingLeft = true;
+		else if(event.keyCode === 87)
+			player1.pressingUp = true;
+	}
 }
 
 document.onkeyup = function(event){
